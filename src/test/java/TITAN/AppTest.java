@@ -1,4 +1,4 @@
-package com.teamTitan.app;
+package TITAN;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

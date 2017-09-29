@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.teamTitan.app</groupId>
-  <artifactId>app</artifactId>
+  <groupId>TITAN</groupId>
+  <artifactId>SoftDevProcessTD</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>app</name>
+  <name>SoftDevProcessTD</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -21,10 +21,10 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-          <groupId>org.darkphoenixs</groupId>
-          <artifactId>log4j</artifactId>
-          <version>1.3.5</version>
-      </dependency>
+    <dependency>
+      <groupId>org.darkphoenixs</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.3.5</version>
+    </dependency>
   </dependencies>
 </project>
