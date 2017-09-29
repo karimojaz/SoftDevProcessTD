@@ -1,2 +1,2 @@
 # SoftDevProcessTD
-TD de Software Dev Process de Victor
+TD de Software Dev Process
