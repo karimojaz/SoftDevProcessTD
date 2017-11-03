@@ -1,15 +1,10 @@
 package TITAN;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Player {
-    private List<?> hand = new ArrayList<>();
+    Hand hand;
 
-    public List getHand() {
+    public Hand getHand() {
         return hand;
     }
-public class Player {
 
-    Hand hand;
 }

@@ -12,7 +12,7 @@ public class PlaygroundStepdefs {
 
     @Then("^Alice has (\\d+) cards in the hand$")
     public void aliceHasCardsInTheHand(Integer expectedCardNumber) {
-        Assert.assertThat(alice.getHand().size(), is(expectedCardNumber));
+        Assert.assertThat(alice.getHand().getSize(), is(expectedCardNumber));
     }
 
     @Given("^The playground is initialized$")
