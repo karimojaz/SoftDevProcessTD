@@ -1,11 +1,8 @@
 package TITAN;
 
-public class Board
-{
+public class Board {
+    Player alice = new Player();
+    Player bob = new Player();
     Deck deck;
 
-    public Board()
-    {
-        
-    }
 }

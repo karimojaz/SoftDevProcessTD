@@ -2,8 +2,7 @@ package TITAN;
 
 import java.util.ArrayList;
 
-public class Deck
-{
+public class Deck {
     ArrayList<Card> cards;
 
 }
