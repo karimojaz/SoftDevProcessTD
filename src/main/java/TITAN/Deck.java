@@ -1,4 +1,9 @@
 package TITAN;
 
-public class Deck {
+import java.util.ArrayList;
+
+public class Deck
+{
+    ArrayList<Card> cards;
+
 }

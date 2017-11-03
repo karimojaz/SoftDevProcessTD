@@ -1,4 +1,7 @@
 package TITAN;
 
-public class Board {
+public class Board
+{
+    Deck deck;
+
 }
