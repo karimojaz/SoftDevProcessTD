@@ -9,4 +9,7 @@ public class Player {
     public List getHand() {
         return hand;
     }
+public class Player {
+
+    Hand hand;
 }
