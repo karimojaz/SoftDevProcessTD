@@ -14,7 +14,7 @@ public class Hand {
         return hand;
     }
 
-    public int getSize(){
+    public int getSize() {
         return hand.size();
     }
 }
