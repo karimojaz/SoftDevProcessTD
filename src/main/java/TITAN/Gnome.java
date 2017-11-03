@@ -8,5 +8,6 @@ public class Gnome extends Card {
     }
 
     void activate() {
+
     }
 }

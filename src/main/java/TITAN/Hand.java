@@ -13,4 +13,8 @@ public class Hand {
     public List<Card> getDeck() {
         return hand;
     }
+
+    public int getSize(){
+        return hand.size();
+    }
 }
