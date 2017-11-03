@@ -1,16 +1,16 @@
 package TITAN;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Hand {
 
-    private List<Card> hand;
+    private ArrayList<Card> hand;
 
     public Hand() {
         //TODO draw n cards from the deck
     }
 
-    public List<Card> getDeck() {
+    public ArrayList<Card> getHand() {
         return hand;
     }
 

@@ -7,4 +7,7 @@ public class Player {
         return hand;
     }
 
+
+    Hand cards;
+
 }

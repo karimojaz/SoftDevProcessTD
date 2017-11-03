@@ -1,8 +1,9 @@
 package TITAN;
 
-public class Board {
-    Player alice = new Player();
-    Player bob = new Player();
-    Deck deck;
+public class Board
+{
+    Deck cards;
+    Player player1;
+    Player player2;
 
 }
