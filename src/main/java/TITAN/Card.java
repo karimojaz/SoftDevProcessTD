@@ -1,7 +1,6 @@
 package TITAN;
 
-
-abstract class Card {
-
+public abstract class Card {
+    
     abstract void activate();
 }
