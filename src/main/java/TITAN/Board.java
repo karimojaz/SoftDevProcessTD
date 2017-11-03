@@ -2,6 +2,12 @@ package TITAN;
 
 public class Board
 {
-    Deck deck;
+    Deck cards;
+    Player player1;
+    Player player2;
 
+    public Board()
+    {
+        
+    }
 }
