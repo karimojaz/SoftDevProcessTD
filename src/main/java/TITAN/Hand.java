@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Hand {
 
     private ArrayList<Card> hand;
+
     private Player owner;
 
     public Hand(Player owner)

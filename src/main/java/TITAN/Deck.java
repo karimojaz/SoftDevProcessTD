@@ -9,6 +9,9 @@ public class Deck
     public Deck(int size)
     {
         cards = new ArrayList<Card>();
+        cards.add(new Korrigan());
+        cards.add(new Goblin());
+        cards.add(new Troll());
         for (int i = 0; i < size; i++)
         {
             cards.add(new Gnome());

@@ -1,6 +1,7 @@
 package TITAN;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Player
 {
@@ -26,6 +27,14 @@ public class Player
         return cardsPlayed;
     }
 
+    public void setKingdom(Kingdom cardsPlayed) {
+        this.cardsPlayed = cardsPlayed;
+    }
+
+    public void setHand(Hand cards) {
+        this.cards = cards;
+    }
+
     public void playCard(int index){
         Card played = cards.popAt(index);
         played.activate(playGround);
@@ -36,5 +45,25 @@ public class Player
         for (int i = 0; i < number; i++) {
             cards.add(playGround.getDeck().pop());
         }
+    }
+
+    public void draw(Player opponent){
+        Random rand = new Random();
+        int randomInt = rand.nextInt(opponent.getHand().getSize());
+        cards.add(opponent.getHand().popAt(randomInt));
+        randomInt = rand.nextInt(opponent.getHand().getSize());
+        cards.add(opponent.getHand().popAt(randomInt));
+    }
+
+    public void swapKingdom(Player opponent){
+        Kingdom k = this.cardsPlayed;
+        this.setKingdom(opponent.getKingdom());
+        opponent.setKingdom(k);
+    }
+
+    public void swapHand(Player opponent){
+        Hand h = this.cards;
+        this.setHand(opponent.getHand());
+        opponent.setHand(h);
     }
 }
