@@ -14,7 +14,7 @@ public class Hand {
         hand = new ArrayList<Card>();
 
         for(int i =0; i<5; i++)
-            hand.add(owner.getPlayGround().cards.pop());
+            add(owner.getBoard().getDeck().pop());
     }
 
     public ArrayList<Card> getHand() {
@@ -23,5 +23,15 @@ public class Hand {
 
     public int getSize() {
         return hand.size();
+    }
+
+    public Card popAt(int index){
+        Card popped = hand.get(index);
+        hand.remove(index);
+        return popped;
+    }
+
+    public void add(Card c){
+        hand.add(c);
     }
 }

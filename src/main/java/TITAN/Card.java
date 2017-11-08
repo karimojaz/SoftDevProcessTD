@@ -1,6 +1,6 @@
 package TITAN;
 
 abstract class Card {
-    
-    abstract void activate();
+
+    abstract void activate(Board playground);
 }

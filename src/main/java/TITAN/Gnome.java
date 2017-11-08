@@ -1,7 +1,9 @@
 package TITAN;
 
 public class Gnome extends Card {
-    void activate() {
 
+    public void activate(Board playground) {
+        playground.getActivePlayer().draw(2);
     }
+
 }

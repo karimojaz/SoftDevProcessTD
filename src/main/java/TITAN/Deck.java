@@ -8,7 +8,11 @@ public class Deck
 
     public Deck(int size)
     {
-        cards = new ArrayList<Card>(size);
+        cards = new ArrayList<Card>();
+        for (int i = 0; i < size; i++)
+        {
+            cards.add(new Gnome());
+        }
     }
 
     public ArrayList<Card> getCards() {
@@ -20,5 +24,13 @@ public class Deck
         Card c = cards.get(0);
         cards.remove(0);
         return c;
+    }
+
+    public int getSize(){
+        return cards.size();
+    }
+
+    public boolean isEmpty(){
+        return  cards.isEmpty();
     }
 }

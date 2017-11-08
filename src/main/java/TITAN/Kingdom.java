@@ -18,4 +18,18 @@ public class Kingdom
     public ArrayList<Card> getCardsInKingdom() {
         return cardsInKingdom;
     }
+    
+    public Integer getGnomeNumber(){
+        int count = 0;
+        for (Card card : cardsInKingdom) {
+            if (card instanceof Gnome){
+                count ++;
+            }
+        }
+        return count;
+    }
+
+    public void add(Card c){
+        cardsInKingdom.add(c);
+    }
 }
