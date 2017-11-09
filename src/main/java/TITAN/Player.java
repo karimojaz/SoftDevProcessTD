@@ -27,11 +27,11 @@ public class Player
         return cardsPlayed;
     }
 
-    public void setKingdom(Kingdom cardsPlayed) {
+    private void setKingdom(Kingdom cardsPlayed) {
         this.cardsPlayed = cardsPlayed;
     }
 
-    public void setHand(Hand cards) {
+    private void setHand(Hand cards) {
         this.cards = cards;
     }
 
@@ -59,11 +59,15 @@ public class Player
         Kingdom k = this.cardsPlayed;
         this.setKingdom(opponent.getKingdom());
         opponent.setKingdom(k);
+        this.cardsPlayed.setOwner(this);
+        opponent.getKingdom().setOwner(opponent);
     }
 
     public void swapHand(Player opponent){
         Hand h = this.cards;
         this.setHand(opponent.getHand());
         opponent.setHand(h);
+        this.cards.setOwner(this);
+        opponent.getHand().setOwner(opponent);
     }
 }

@@ -8,6 +8,10 @@ public class Hand {
 
     private Player owner;
 
+    public void setOwner(Player owner) {
+        this.owner = owner;
+    }
+
     public Hand(Player owner)
     {
         this.owner = owner;

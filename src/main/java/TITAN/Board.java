@@ -2,9 +2,9 @@ package TITAN;
 
 public class Board
 {
-    Deck cards;
-    Player activePlayer;
-    Player unactivePlayer;
+    private Deck cards;
+    private Player activePlayer;
+    private Player unactivePlayer;
 
     public Board() {
         this.cards = new Deck(42);
