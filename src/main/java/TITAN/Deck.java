@@ -1,6 +1,7 @@
 package TITAN;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck
 {
@@ -9,13 +10,18 @@ public class Deck
     public Deck(int size)
     {
         cards = new ArrayList<Card>();
-        cards.add(new Korrigan());
-        cards.add(new Goblin());
-        cards.add(new Troll());
-        for (int i = 0; i < size; i++)
+
+        for (int i = 0; i < size/6; i++)
         {
             cards.add(new Gnome());
+            cards.add(new Goblin());
+            cards.add(new Troll());
+            cards.add(new Elf());
+            cards.add(new Dryad());
+            cards.add(new Korrigan());
         }
+
+        Collections.shuffle(cards);
     }
 
     public ArrayList<Card> getCards() {

@@ -22,8 +22,14 @@ public class Kingdom
     public ArrayList<Card> getCardsInKingdom() {
         return cardsInKingdom;
     }
+
+    public Card popAt(int index){
+        Card popped = cardsInKingdom.get(index);
+        cardsInKingdom.remove(index);
+        return popped;
+    }
     
-    public Integer getGnomeNumber(){
+    public int getGnomeNumber(){
         int count = 0;
         for (Card card : cardsInKingdom) {
             if (card instanceof Gnome){
@@ -33,7 +39,7 @@ public class Kingdom
         return count;
     }
 
-    public Integer getTrollNumber(){
+    public int getTrollNumber(){
         int count = 0;
         for (Card card : cardsInKingdom) {
             if (card instanceof Troll){
@@ -43,7 +49,7 @@ public class Kingdom
         return count;
     }
 
-    public Integer getGoblinNumber(){
+    public int getGoblinNumber(){
         int count = 0;
         for (Card card : cardsInKingdom) {
             if (card instanceof Goblin){
@@ -53,7 +59,17 @@ public class Kingdom
         return count;
     }
 
-    public Integer getKorriganNumber(){
+    public int getDryadNumber(){
+        int count = 0;
+        for (Card card : cardsInKingdom) {
+            if (card instanceof Dryad){
+                count ++;
+            }
+        }
+        return count;
+    }
+
+    public int getKorriganNumber(){
         int count = 0;
         for (Card card : cardsInKingdom) {
             if (card instanceof Korrigan){
@@ -61,6 +77,20 @@ public class Kingdom
             }
         }
         return count;
+    }
+
+    public int getElfNumber(){
+        int count = 0;
+        for (Card card : cardsInKingdom) {
+            if (card instanceof Elf){
+                count ++;
+            }
+        }
+        return count;
+    }
+
+    public int getSize(){
+        return cardsInKingdom.size();
     }
 
     public void add(Card c){

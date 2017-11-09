@@ -12,7 +12,7 @@ public class Player
     public Player(Board playGround) {
         this.playGround = playGround;
         this.cardsPlayed = new Kingdom(this);
-        cards = new Hand(this);
+        this.cards = new Hand(this);
     }
 
     public Hand getHand() {
@@ -47,12 +47,16 @@ public class Player
         }
     }
 
-    public void draw(Player opponent){
+    public void steal(Player opponent){
         Random rand = new Random();
         int randomInt = rand.nextInt(opponent.getHand().getSize());
         cards.add(opponent.getHand().popAt(randomInt));
         randomInt = rand.nextInt(opponent.getHand().getSize());
         cards.add(opponent.getHand().popAt(randomInt));
+    }
+
+    public void steal(Player opponent, int index){
+        cards.add(opponent.getKingdom().popAt(index));
     }
 
     public void swapKingdom(Player opponent){

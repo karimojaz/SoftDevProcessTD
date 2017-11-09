@@ -3,6 +3,6 @@ package TITAN;
 public class Goblin extends Card {
 
     public void activate(Board board){
-        board.getActivePlayer().swapHand(board.getUnactivePlayer());
+        board.getActivePlayer().swapHand(board.getInactivePlayer());
     }
 }

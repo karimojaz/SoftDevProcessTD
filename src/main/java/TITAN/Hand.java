@@ -22,7 +22,7 @@ public class Hand {
             add(owner.getBoard().getDeck().pop());
     }
 
-    public ArrayList<Card> getHand() {
+    public ArrayList<Card> getCardsInHand() {
         return hand;
     }
 

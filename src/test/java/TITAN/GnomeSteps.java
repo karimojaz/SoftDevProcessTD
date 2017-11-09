@@ -13,7 +13,8 @@ public class GnomeSteps {
     @Given("^Alice play a Gnome$")
     public void alice_play_a_gnome() throws Throwable {
         playground = new Board();
-        playground.getActivePlayer().playCard(0);
+        playground.getActivePlayer().getHand().add(new Gnome());
+        playground.getActivePlayer().playCard(playground.getActivePlayer().getHand().getSize()-1);
     }
 
     @Then("^Alice has one more gnome in her kingdom$")
