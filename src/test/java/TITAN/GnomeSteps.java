@@ -1,5 +1,6 @@
 package TITAN;
 
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,9 +12,12 @@ import static org.hamcrest.core.Is.is;
 public class GnomeSteps {
     private Board playground;
 
+    @Before public void setUp(){
+        playground = new Board();
+    }
+
     @When("^Alice play a Gnome$")
     public void alice_play_a_gnome() throws Throwable {
-        playground = new Board();
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Gnome());
         playground.getActivePlayer().playCard(0);
@@ -32,7 +36,6 @@ public class GnomeSteps {
 
     @Given("^There is only one card left in the left$")
     public void There_is_only_one_card_left_in_the_left() throws Throwable {
-        playground = new Board();
         playground.getDeck().getCards().clear();
         playground.getDeck().getCards().add(new Gnome());
     }
