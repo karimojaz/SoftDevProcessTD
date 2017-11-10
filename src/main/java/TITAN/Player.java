@@ -43,16 +43,22 @@ public class Player
 
     public void draw(int number){
         for (int i = 0; i < number; i++) {
-            cards.add(playGround.getDeck().pop());
+            if (playGround.getDeck().getSize()>0) {
+                cards.add(playGround.getDeck().pop());
+            }
         }
     }
 
     public void steal(Player opponent){
         Random rand = new Random();
-        int randomInt = rand.nextInt(opponent.getHand().getSize());
-        cards.add(opponent.getHand().popAt(randomInt));
-        randomInt = rand.nextInt(opponent.getHand().getSize());
-        cards.add(opponent.getHand().popAt(randomInt));
+        if (opponent.getHand().getSize()>0) {
+            int randomInt = rand.nextInt(opponent.getHand().getSize());
+            cards.add(opponent.getHand().popAt(randomInt));
+        }
+        if (opponent.getHand().getSize()>0) {
+            int randomInt = rand.nextInt(opponent.getHand().getSize());
+            cards.add(opponent.getHand().popAt(randomInt));
+        }
     }
 
     public void steal(Player opponent, int index){

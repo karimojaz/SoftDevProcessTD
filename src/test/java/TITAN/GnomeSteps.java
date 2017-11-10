@@ -13,8 +13,9 @@ public class GnomeSteps {
     @Given("^Alice play a Gnome$")
     public void alice_play_a_gnome() throws Throwable {
         playground = new Board();
+        playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Gnome());
-        playground.getActivePlayer().playCard(playground.getActivePlayer().getHand().getSize()-1);
+        playground.getActivePlayer().playCard(0);
     }
 
     @Then("^Alice has one more gnome in her kingdom$")
@@ -25,7 +26,23 @@ public class GnomeSteps {
     @And("^Alice draws two cards from the deck$")
     public void AliceDrawsTwoCardsFromTheDeck() {
         Assert.assertThat(playground.getDeck().getSize(), is(30));
-        Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(6));
+        Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(2));
+    }
+
+    @Given("^There is only one card left in the left$")
+    public void There_is_only_one_card_left_in_the_left() throws Throwable {
+        playground.getDeck().getCards().clear();
+        playground.getDeck().getCards().add(new Gnome());
+    }
+
+    @Then("^Alice should draw only one card$")
+    public void Alice_should_draw_only_one_card() throws Throwable {
+        Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(1));
+    }
+
+    @And("^the deck should be empty$")
+    public void the_deck_should_be_empty() throws Throwable {
+        Assert.assertThat(playground.getDeck().isEmpty(), is(true));
     }
 
 }
