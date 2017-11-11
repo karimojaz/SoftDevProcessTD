@@ -1,6 +1,5 @@
 package TITAN;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Player
