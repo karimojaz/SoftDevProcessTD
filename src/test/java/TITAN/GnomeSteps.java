@@ -16,8 +16,8 @@ public class GnomeSteps {
         playground = new Board();
     }
 
-    @When("^Alice play a Gnome$")
-    public void alice_play_a_gnome() throws Throwable {
+    @When("^Alice plays a Gnome$")
+    public void alice_plays_a_gnome() throws Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Gnome());
         playground.getActivePlayer().playCard(0);

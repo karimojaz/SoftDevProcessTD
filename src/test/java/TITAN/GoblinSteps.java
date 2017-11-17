@@ -16,8 +16,8 @@ public class GoblinSteps {
         playground = new Board();
     }
 
-    @When("^Alice play a goblin$")
-    public void alice_play_a_goblin() throws Throwable {
+    @When("^Alice plays a goblin$")
+    public void alice_plays_a_goblin() throws Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Goblin());
         playground.getActivePlayer().playCard(0);
