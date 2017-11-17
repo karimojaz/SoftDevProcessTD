@@ -1,6 +1,6 @@
-Feature: #gnome effect management
+Feature: a effect management
 
-  Scenario: #a gnome is summoned
+  Scenario: a gnome is summoned
     When Alice play a Gnome
     Then Alice has one more gnome in her kingdom
     And Alice draws two cards from the deck

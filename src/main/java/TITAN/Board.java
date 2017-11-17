@@ -7,12 +7,12 @@ public class Board
 {
     private Deck cards;
     private Player activePlayer;
-    private Player unactivePlayer;
+    private Player inactivePlayer;
 
     public Board() {
         this.cards = new Deck(42);
         this.activePlayer = new Player(this);
-        this.unactivePlayer = new Player(this);
+        this.inactivePlayer = new Player(this);
     }
 
     public Deck getDeck() {
@@ -24,13 +24,13 @@ public class Board
     }
 
     public Player getInactivePlayer() {
-        return unactivePlayer;
+        return inactivePlayer;
     }
 
     public void newTurn() {
         Player p = activePlayer;
-        activePlayer = unactivePlayer;
-        unactivePlayer = p;
+        activePlayer = inactivePlayer;
+        inactivePlayer = p;
         activePlayer.draw(1);
     }
 

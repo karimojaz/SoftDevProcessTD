@@ -40,6 +40,16 @@ public class GnomeSteps {
         playground.getDeck().getCards().add(new Gnome());
     }
 
+    @Given("^The deck is empty$")
+    public void The_Deck_Is_Empty() throws Throwable {
+        playground.getDeck().getCards().clear();
+    }
+
+    @Then("^Alice shouldn't draw card$")
+    public void Alice_Shouldnt_draw_card() throws Throwable {
+        Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(0));
+    }
+
     @Then("^Alice should draw only one card$")
     public void Alice_should_draw_only_one_card() throws Throwable {
         Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(1));
