@@ -1,4 +1,4 @@
-Feature: a effect management
+Feature: gnome management effect
 
   Scenario: a gnome is summoned
     When Alice play a Gnome
