@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="770.0" fitWidth="1280.0">
+         <image>
+            <Image url="@../../../../../../../Dark-Wood-Floors-Picture.jpg" />
+         </image>
+      </ImageView>
+      <SplitPane dividerPositions="0.85" layoutX="224.0" layoutY="185.0" opacity="0.38" prefHeight="770.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="671.0" layoutY="175.0" orientation="VERTICAL" prefHeight="768.0" prefWidth="1083.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="15.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="140.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="140.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="265.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="265.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="390.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="390.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="515.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="515.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="640.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="640.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="765.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="765.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="890.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="890.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="14.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="139.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="139.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="264.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="264.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="389.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="389.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="514.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="514.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="639.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="639.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="764.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="764.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="889.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="889.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="37.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../a3qenLQ_700b.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="27.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1">
+                     <font>
+                        <Font name="Rockwell" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="85.0" layoutY="744.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font name="Rockwell" size="36.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="42.0" layoutY="563.0">
+                     <image>
+                        <Image url="@../../../../../../../user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="39.0" layoutY="17.0">
+                     <image>
+                        <Image url="@../../../../../../../user.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="27.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2">
+                     <font>
+                        <Font name="Rockwell" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="84.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font name="Rockwell" size="36.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
