@@ -32,5 +32,4 @@ public class GoblinSteps {
         Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(5));
         Assert.assertThat(playground.getInactivePlayer().getHand().getSize(), is(0));
     }
-
 }
