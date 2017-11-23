@@ -30,6 +30,7 @@ public class Hand {
         return hand.size();
     }
 
+
     public Card popAt(int index){
         Card popped = hand.get(index);
         hand.remove(index);

@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<<<<<<< HEAD
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-=======
+
 <?import java.lang.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
->>>>>>> 7861d874b736fdc3723a09b39d9f4234aec46a04
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<<<<<<< HEAD
+
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="770.0" fitWidth="1280.0">
          <image>
-            <Image url="@../../../../../../../Dark-Wood-Floors-Picture.jpg" />
+            <Image url="@/src/main/resources/image/Dark-Wood-Floors-Picture.jpg" />
          </image>
       </ImageView>
       <SplitPane dividerPositions="0.85" layoutX="224.0" layoutY="185.0" opacity="0.38" prefHeight="770.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -76,7 +74,7 @@
                <children>
                   <ImageView fitHeight="170.0" fitWidth="115.0" layoutX="37.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../a3qenLQ_700b.jpg" />
+                        <Image url="@/src/main/resources/image/a3qenLQ_700b.jpg" />
                      </image>
                   </ImageView>
                   <Text layoutX="27.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1">
@@ -91,12 +89,12 @@
                   </Text>
                   <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="42.0" layoutY="563.0">
                      <image>
-                        <Image url="@../../../../../../../user.png" />
+                        <Image url="@/src/main/resources/image/user.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="39.0" layoutY="17.0">
                      <image>
-                        <Image url="@../../../../../../../user.png" />
+                        <Image url="@/src/main/resources/image/user.png" />
                      </image>
                   </ImageView>
                   <Text layoutX="27.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2">
@@ -113,7 +111,8 @@
             </AnchorPane>
         </items>
       </SplitPane>
-=======
+   </children>
+</AnchorPane>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="777.0" fitWidth="1290.0" layoutX="-1.0" layoutY="-5.0" pickOnBounds="true">
@@ -121,6 +120,5 @@
             <Image url="@../image/hbg.jpg" />
          </image>
       </ImageView>
->>>>>>> 7861d874b736fdc3723a09b39d9f4234aec46a04
    </children>
 </AnchorPane>
