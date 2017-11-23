@@ -9,13 +9,17 @@ import javafx.stage.Stage;
 
 public class
 App extends Application {
+    public Stage getStage() {
+        return stage;
+    }
+
     private Stage stage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.stage=primaryStage;
         stage.setTitle("TITAN GAME");
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TitanGame.fxml"));
+        Parent root = FXMLLoader.load(App.class.getResource("/fxml/Game.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
