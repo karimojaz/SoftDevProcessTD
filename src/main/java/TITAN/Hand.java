@@ -39,4 +39,10 @@ public class Hand {
     public void add(Card c){
         hand.add(c);
     }
+
+    public Card chooseCard(int index)
+    {
+        Card choose = hand.get(index);
+        return choose;
+    }
 }
