@@ -1,15 +1,18 @@
 package TITAN;
 
-import TITAN.App;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.stage.Stage;
+import javafx.scene.control.SplitPane;
+import javafx.scene.layout.AnchorPane;
 
 import javax.swing.text.html.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
+
+    @FXML private SplitPane SplitPane1, SplitPane2;
+    @FXML private AnchorPane AnchorPane1, AnchorPane2, AnchorPane3;
 
     @FXML
     private ImageView Card1handplayer1;
@@ -50,5 +53,6 @@ public class Controller implements Initializable{
    }
 
     public void initialize(URL location, ResourceBundle resources) {
+
     }
 }
