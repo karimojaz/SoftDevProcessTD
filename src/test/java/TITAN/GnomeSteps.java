@@ -34,8 +34,8 @@ public class GnomeSteps {
         Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(2));
     }
 
-    @Given("^There is only one card left in the left$")
-    public void There_is_only_one_card_left_in_the_left() throws Throwable {
+    @Given("^There is only one card left in the deck$")
+    public void There_is_only_one_card_left_in_the_deck() throws Throwable {
         playground.getDeck().getCards().clear();
         playground.getDeck().getCards().add(new Gnome());
     }

@@ -6,7 +6,7 @@ Feature: gnome management effect
     And Alice draws two cards from the deck
 
   Scenario: a gnome is played but there only one card left in the deck
-    Given There is only one card left in the left
+    Given There is only one card left in the deck
     When Alice plays a Gnome
     Then Alice should draw only one card
     And the deck should be empty
