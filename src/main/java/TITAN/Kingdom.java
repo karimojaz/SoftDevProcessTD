@@ -1,5 +1,5 @@
 package TITAN;
-
+//import TITIAN.Player;
 import java.util.ArrayList;
 
 public class Kingdom
@@ -28,6 +28,7 @@ public class Kingdom
         cardsInKingdom.remove(index);
         return popped;
     }
+
     
     public int getGnomeNumber(){
         int count = 0;
@@ -38,6 +39,7 @@ public class Kingdom
         }
         return count;
     }
+
 
     public int getTrollNumber(){
         int count = 0;
@@ -58,6 +60,8 @@ public class Kingdom
         }
         return count;
     }
+
+
 
     public int getDryadNumber(){
         int count = 0;
