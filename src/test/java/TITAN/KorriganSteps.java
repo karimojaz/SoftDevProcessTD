@@ -23,7 +23,7 @@ public class KorriganSteps {
     }
     @Then("^Alice draws two random cards within the opponent hand$")
     public void alice_draws_two_random_cards_within_the_opponent_hand() {
-        //Assert.assertThat(playground.getInactivePlayer().getHand().getSize(),is ());
+        Assert.assertThat(playground.getInactivePlayer().getHand().getSize(),is (3));
         Assert.assertThat(playground.getActivePlayer().getKingdom().getKorriganNumber(), is(1));
     }
 }
