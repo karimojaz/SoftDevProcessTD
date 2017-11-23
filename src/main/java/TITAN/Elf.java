@@ -11,4 +11,8 @@ public class Elf extends Card {
     public void setEffect(Card effect) {
         this.effect = effect;
     }
+
+    public Card getEffect() {
+        return effect;
+    }
 }
