@@ -4,6 +4,9 @@ import cucumber.api.java.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
+
+import static org.hamcrest.core.Is.is;
 
 
 public class ElfSteps {
@@ -22,14 +25,18 @@ public class ElfSteps {
     @Then("^Alice choose one card in the front of you and Alice copy the effect of this card$")
         public void AliceChooseacard()
         {
-            Card choose  = playground.getActivePlayer().getHand().chooseCard(1);
-            playground.getActivePlayer().getHand().add(choose);
-            playground.getActivePlayer().getHand().popAt(0);
+            Assert.assertThat(playground.getActivePlayer().getKingdom().getSize(), is(1));
         }
 
     @Given("^There is only one card left in the deck$")
     public void There_is_only_one_card_left_in_the_deck() throws Throwable {
-        playground.getDeck().getCards().clear();
+        Assert.assertThat(playground.getDeck().getSize(), is(1));
+    }
+
+    @Then("^the card goes automatically to the kingdom$")
+    public void Card_goes_to_the_kingdom() throws  Throwable {
+        Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(1));
+
     }
 
 }
