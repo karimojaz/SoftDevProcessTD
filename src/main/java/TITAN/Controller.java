@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
+
     @FXML
     private ImageView Card1handplayer1;
     @FXML
@@ -43,12 +44,10 @@ public class Controller implements Initializable{
     @FXML
     private ImageView Card8handplayer2;
 
-    public void setMainapp(App mainapp) {
-        this.mainapp = mainapp;
-    }
+   public Controller()
+   {
 
-    private App mainapp;
-    private Stage stage;
+   }
 
     public void initialize(URL location, ResourceBundle resources) {
     }
