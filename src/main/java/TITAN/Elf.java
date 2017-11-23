@@ -13,6 +13,6 @@ public class Elf extends Card {
     }
 
     public Card getEffect() {
-        return effect ;
+        return effect;
     }
 }
