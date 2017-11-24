@@ -40,6 +40,13 @@ public class Kingdom
         return count;
     }
 
+    public String toString(){
+        String string = "Kingdom : ";
+        for (int i=0; i<this.getSize(); i++){
+            string += cardsInKingdom.get(i) + ", " + i + " ; ";
+        }
+        return string;
+    }
 
     public int getSize(){
         return cardsInKingdom.size();

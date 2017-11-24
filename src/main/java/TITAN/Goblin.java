@@ -6,7 +6,7 @@ public class Goblin extends Card {
         board.getActivePlayer().swapHand(board.getInactivePlayer());
     }
 
-    public String ToString(){
+    public String toString(){
         return "Goblin";
     }
 }

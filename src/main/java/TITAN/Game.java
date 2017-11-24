@@ -15,7 +15,9 @@ public class Game {
     //methods
     public void play(){
         while (!board.getDeck().isEmpty()){
-            board.getActivePlayer().getHand().display();
+            System.out.println("Opponent "+board.getInactivePlayer().getKingdom());
+            System.out.println("Your "+board.getActivePlayer().getKingdom());
+            System.out.println(board.getActivePlayer().getHand());
             System.out.print("Pick a card in your hand to be played : ");
 
             Scanner sc = new Scanner(System.in);
@@ -24,7 +26,26 @@ public class Game {
             board.getActivePlayer().playCard(index);
             board.newTurn();
         }
+        while (!board.getActivePlayer().getHand().isEmpty() ){
+            System.out.println("Opponent "+board.getInactivePlayer().getKingdom());
+            System.out.println("Your "+board.getActivePlayer().getKingdom());
+            System.out.println(board.getActivePlayer().getHand());
+            System.out.print("Pick a card in your hand to be played : ");
 
+            Scanner sc = new Scanner(System.in);
+            int index = sc.nextInt();
+
+            board.getActivePlayer().playCard(index);
+
+            if ( board.getInactivePlayer().getHand().isEmpty())
+            {
+                break;
+            }
+            else{
+                board.newTurn();
+            }
+        }
+        //score
     }
 
 

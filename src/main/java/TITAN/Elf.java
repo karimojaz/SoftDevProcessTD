@@ -1,10 +1,16 @@
 package TITAN;
 
+import java.util.Scanner;
+
 public class Elf extends Card {
 
     private Card effect;
 
     public void activate(Board board){
+        System.out.print("Pick a card from your kingdom: ");
+        Scanner sc = new Scanner(System.in);
+        int index = sc.nextInt();
+        this.setEffect(board.getActivePlayer().getKingdom().getCardsInKingdom().get(index));
         if (effect != null){
             effect.activate(board);
         }
@@ -20,7 +26,7 @@ public class Elf extends Card {
         return effect;
     }
 
-    public String ToString(){
+    public String toString(){
         return "Elf";
     }
 

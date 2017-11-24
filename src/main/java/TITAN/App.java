@@ -12,14 +12,15 @@ App extends Application {
 
     @Override public void start(Stage primaryStage) throws Exception
     {
-        primaryStage.setTitle("TITAN GAME");
+        /*primaryStage.setTitle("TITAN GAME");
         Parent root = FXMLLoader.load(App.class.getResource("/fxml/Game.fxml"));
-
-
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.sizeToScene();
-        primaryStage.show();
+        primaryStage.show();*/
+
+        Game g = new Game();
+        g.play();
     }
 }

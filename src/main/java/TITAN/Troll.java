@@ -5,7 +5,7 @@ public class Troll extends Card {
         board.getActivePlayer().swapKingdom(board.getInactivePlayer());
     }
 
-    public String ToString(){
+    public String toString(){
         return "Troll";
     }
 

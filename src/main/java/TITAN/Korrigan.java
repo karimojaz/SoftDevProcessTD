@@ -6,7 +6,7 @@ public class Korrigan extends Card {
         board.getActivePlayer().steal(board.getInactivePlayer());
     }
 
-    public String ToString(){
+    public String toString(){
         return "Korrigan";
     }
 

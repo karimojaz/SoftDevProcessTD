@@ -47,9 +47,15 @@ public class Hand {
         return choose;
     }
 
-    public void display(){
+    public boolean isEmpty(){
+        return  hand.isEmpty();
+    }
+
+    public String toString(){
+        String string = "Hand : ";
         for (int i=0; i<this.getSize(); i++){
-            System.out.print(hand.get(i) + ", " + i + " ; " );
+            string += hand.get(i) + ", " + i + " ; ";
         }
+        return string;
     }
 }

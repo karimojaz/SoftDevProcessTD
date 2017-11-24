@@ -6,7 +6,7 @@ public class Gnome extends Card {
         playground.getActivePlayer().draw(2);
     }
 
-    public String ToString(){
+    public String toString(){
         return "Gnome";
     }
 
