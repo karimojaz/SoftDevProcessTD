@@ -46,4 +46,10 @@ public class Hand {
         Card choose = hand.get(index);
         return choose;
     }
+
+    public void display(){
+        for (int i=0; i<this.getSize(); i++){
+            System.out.print(hand.get(i) + ", " + i + " ; " );
+        }
+    }
 }

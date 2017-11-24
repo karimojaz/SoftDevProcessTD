@@ -4,4 +4,3 @@ Feature: troll management effect
     When Alice plays a troll
     Then Alice swaps the cards in front of her with the opponent
 
-

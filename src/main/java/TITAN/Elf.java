@@ -19,4 +19,10 @@ public class Elf extends Card {
     public Card getEffect() {
         return effect;
     }
+
+    public String ToString(){
+        return "Elf";
+    }
+
+
 }

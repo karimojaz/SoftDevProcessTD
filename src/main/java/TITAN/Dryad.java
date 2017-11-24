@@ -8,9 +8,11 @@ public class Dryad extends Card {
         board.getActivePlayer().steal(board.getInactivePlayer(), index);
     }
 
-
-
     public void setIndex(int index) {
         this.index = index;
+    }
+
+    public String ToString(){
+        return "Dryad";
     }
 }

@@ -13,6 +13,7 @@ public class Board
         this.cards = new Deck(42);
         this.activePlayer = new Player(this);
         this.inactivePlayer = new Player(this);
+        this.activePlayer.draw(1);
     }
 
     public Deck getDeck() {
