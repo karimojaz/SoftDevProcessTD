@@ -13,9 +13,8 @@ App extends Application {
     @Override public void start(Stage primaryStage) throws Exception
     {
         primaryStage.setTitle("TITAN GAME");
-        FXMLLoader loader = FXMLLoader.load(App.class.getResource("/fxml/Game.fxml"));
-        Parent root = loader.load();
-        Controller myCtrl = loader.getController();
+        Parent root = FXMLLoader.load(App.class.getResource("/fxml/Game.fxml"));
+
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
