@@ -5,7 +5,9 @@ public class Elf extends Card {
     private Card effect;
 
     public void activate(Board board){
-        effect.activate(board);
+        if (effect != null){
+            effect.activate(board);
+        }
     }
 
     public void setEffect(Card effect) {
