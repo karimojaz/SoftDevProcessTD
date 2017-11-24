@@ -37,12 +37,12 @@ public class Board
     public int score (Player player){
         int score = player.getKingdom().getSize();
         ArrayList<Integer> races = new ArrayList<Integer>();
-        races.add(player.getKingdom().getGnomeNumber());
-        races.add(player.getKingdom().getTrollNumber());
-        races.add(player.getKingdom().getElfNumber());
-        races.add(player.getKingdom().getDryadNumber());
-        races.add(player.getKingdom().getGoblinNumber());
-        races.add(player.getKingdom().getKorriganNumber());
+        races.add(player.getKingdom().getRaceNumber(new Gnome()));
+        races.add(player.getKingdom().getRaceNumber(new Troll()));
+        races.add(player.getKingdom().getRaceNumber(new Elf()));
+        races.add(player.getKingdom().getRaceNumber(new Dryad()));
+        races.add(player.getKingdom().getRaceNumber(new Goblin()));
+        races.add(player.getKingdom().getRaceNumber(new Korrigan()));
         if (Collections.min(races) > 0){
             score += 3;
         }

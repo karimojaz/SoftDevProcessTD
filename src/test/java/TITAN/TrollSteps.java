@@ -24,8 +24,8 @@ public class TrollSteps {
     }
     @Then("^Alice swaps the cards in front of her with the opponent$")
     public void alice_swaps_the_cards_in_front_of_her_with_the_opponent() {
-        Assert.assertThat(playground.getInactivePlayer().getKingdom().getTrollNumber(), is(1));
-        Assert.assertThat(playground.getActivePlayer().getKingdom().getTrollNumber(), is(0));
+        Assert.assertThat(playground.getInactivePlayer().getKingdom().getRaceNumber(new Troll()), is(1));
+        Assert.assertThat(playground.getActivePlayer().getKingdom().getRaceNumber(new Troll()), is(0));
     }
 
 }

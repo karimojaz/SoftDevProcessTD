@@ -9,7 +9,9 @@ public class Elf extends Card {
     }
 
     public void setEffect(Card effect) {
-        this.effect = effect;
+        if (effect.getClass() != this.getClass()) {
+            this.effect = effect;
+        }
     }
 
     public Card getEffect() {

@@ -29,69 +29,17 @@ public class Kingdom
         return popped;
     }
 
-    
-    public int getGnomeNumber(){
+
+    public int getRaceNumber(Card race){
         int count = 0;
         for (Card card : cardsInKingdom) {
-            if (card instanceof Gnome){
+            if (card.getClass() == race.getClass()){
                 count ++;
             }
         }
         return count;
     }
 
-
-    public int getTrollNumber(){
-        int count = 0;
-        for (Card card : cardsInKingdom) {
-            if (card instanceof Troll){
-                count ++;
-            }
-        }
-        return count;
-    }
-
-    public int getGoblinNumber(){
-        int count = 0;
-        for (Card card : cardsInKingdom) {
-            if (card instanceof Goblin){
-                count ++;
-            }
-        }
-        return count;
-    }
-
-
-
-    public int getDryadNumber(){
-        int count = 0;
-        for (Card card : cardsInKingdom) {
-            if (card instanceof Dryad){
-                count ++;
-            }
-        }
-        return count;
-    }
-
-    public int getKorriganNumber(){
-        int count = 0;
-        for (Card card : cardsInKingdom) {
-            if (card instanceof Korrigan){
-                count ++;
-            }
-        }
-        return count;
-    }
-
-    public int getElfNumber(){
-        int count = 0;
-        for (Card card : cardsInKingdom) {
-            if (card instanceof Elf){
-                count ++;
-            }
-        }
-        return count;
-    }
 
     public int getSize(){
         return cardsInKingdom.size();

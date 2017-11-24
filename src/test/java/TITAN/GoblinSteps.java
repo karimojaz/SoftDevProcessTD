@@ -24,7 +24,7 @@ public class GoblinSteps {
     }
     @Then("^Alice has one more goblin in her kingdom$")
     public void alice_has_one_more_goblin() {
-        Assert.assertThat(playground.getActivePlayer().getKingdom().getGoblinNumber(), is(1));
+        Assert.assertThat(playground.getActivePlayer().getKingdom().getRaceNumber(new Goblin()), is(1));
     }
 
     @And("^Alice switches her hand with the opponent$")

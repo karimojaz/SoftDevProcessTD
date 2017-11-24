@@ -25,7 +25,7 @@ public class GnomeSteps {
 
     @Then("^Alice has one more gnome in her kingdom$")
     public void aliceHas1MoreGnome() {
-        Assert.assertThat(playground.getActivePlayer().getKingdom().getGnomeNumber(), is(1));
+        Assert.assertThat(playground.getActivePlayer().getKingdom().getRaceNumber(new Gnome()), is(1));
     }
 
     @And("^Alice draws two cards from the deck$")
