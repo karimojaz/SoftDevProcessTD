@@ -3,6 +3,7 @@ package TITAN;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.SplitPane;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
@@ -33,6 +34,11 @@ public class Controller implements Initializable{
 
    public Controller()
    {
+       Board board = new Board();
+       this.Card1handplayer1 = new ImageView();
+       this.Card1handplayer2 = new ImageView();
+       Image carte = new Image(getClass().getResource("/image/DosDeCarte.png").toString());
+       Card1handplayer1.setImage(carte);
 
    }
 
