@@ -62,7 +62,9 @@ public class Player
     }
 
     public void steal(Player opponent, int index){
-        cardsPlayed.add(opponent.getKingdom().popAt(index));
+        if (index != -1) {
+            cardsPlayed.add(opponent.getKingdom().popAt(index));
+        }
     }
 
     public void swapKingdom(Player opponent){

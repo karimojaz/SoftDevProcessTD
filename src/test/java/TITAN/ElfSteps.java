@@ -28,10 +28,7 @@ public class ElfSteps {
             Assert.assertThat(playground.getActivePlayer().getKingdom().getSize(), is(1));
         }
 
-    @Given("^There is only one card left in the deck$")
-    public void There_is_only_one_card_left_in_the_deck() throws Throwable {
-        Assert.assertThat(playground.getDeck().getSize(), is(1));
-    }
+
 
     @Then("^the card goes automatically to the kingdom$")
     public void Card_goes_to_the_kingdom() throws  Throwable {
