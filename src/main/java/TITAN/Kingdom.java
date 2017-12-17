@@ -1,5 +1,4 @@
 package TITAN;
-//import TITIAN.Player;
 import java.util.ArrayList;
 
 public class Kingdom

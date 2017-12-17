@@ -6,7 +6,8 @@ public class Dryad extends Card {
 
     private int index;
 
-    public void activate(Board board){
+    public void activate(Board board)
+    {
         System.out.print("Pick a card from your opponent kingdom: ");
         Scanner sc = new Scanner(System.in);
         index = sc.nextInt();
