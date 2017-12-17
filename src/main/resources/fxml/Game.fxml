@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -111,5 +113,15 @@
             <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="175.0" fitWidth="122.0" layoutX="1156.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1172.0" layoutY="472.0" prefHeight="29.0" prefWidth="94.0" text="Deck : 0" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
