@@ -20,7 +20,7 @@ App extends Application {
         primaryStage.sizeToScene();
         primaryStage.show();
 
-        //Game g = new Game();
-        //g.play();
+        Game g = new Game();
+        g.play();
     }
 }

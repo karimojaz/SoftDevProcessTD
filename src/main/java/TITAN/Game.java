@@ -3,9 +3,7 @@ import java.util.Scanner;
 
 public class Game {
 
-
     private Board board;
-
 
     //constructor
     public Game() {
