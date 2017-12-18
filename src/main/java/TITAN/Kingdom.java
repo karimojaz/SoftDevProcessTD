@@ -1,6 +1,9 @@
 package TITAN;
 import java.util.ArrayList;
 
+/**
+ * Kingdom is defined for each player and has a stack of card
+ */
 public class Kingdom
 {
     private ArrayList<Card> cardsInKingdom;
@@ -22,13 +25,20 @@ public class Kingdom
         return cardsInKingdom;
     }
 
+
+    /*
+      Remove a selected from a kingdom and return the same card
+
+     */
     public Card popAt(int index){
         Card popped = cardsInKingdom.get(index);
         cardsInKingdom.remove(index);
         return popped;
     }
 
-
+    /*
+      Return the number of card of each race in one kingdom
+     */
     public int getRaceNumber(Card race){
         int count = 0;
         for (Card card : cardsInKingdom) {
@@ -38,6 +48,7 @@ public class Kingdom
         }
         return count;
     }
+
 
     public String toString(){
         String string = "Kingdom : ";

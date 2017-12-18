@@ -40,8 +40,8 @@ public class ElfSteps {
 
 
     @Then("^the card is not activated$")
-        public void Card_is_not_activated() throws Throwable{
-            Assert.assertThat(playground.getInactivePlayer().getKingdom().getSize(), is(0));
+        public void Card_is_not_activated() throws Throwable {
+        Assert.assertThat(playground.getInactivePlayer().getKingdom().getSize(), is(0));
     }
 
 

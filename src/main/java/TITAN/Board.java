@@ -3,11 +3,24 @@ package TITAN;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/***
+ *
+ * The class Board define the:
+ *  Players kingdom
+ *  Score
+ *  the current player
+ * the  player
+
+ ***/
 public class Board
 {
     private Deck cards;
     private Player activePlayer;
     private Player inactivePlayer;
+
+    /*
+    * Set the deck with 42 cards
+    */
 
     public Board() {
 
@@ -22,13 +35,23 @@ public class Board
         return cards;
     }
 
+    /*
+     * The current player
+     */
     public Player getActivePlayer() {
         return activePlayer;
     }
+    /*
+     * The opponent
+     */
 
     public Player getInactivePlayer() {
         return inactivePlayer;
     }
+
+    /*
+     * Altern the player on the game
+     */
 
     public void newTurn() {
         Player p = activePlayer;
@@ -36,7 +59,9 @@ public class Board
         inactivePlayer = p;
         activePlayer.draw(1);
     }
-
+    /*
+     *  Calculate the score for each player
+     */
     public int score (Player player){
         int score = player.getKingdom().getSize();
         ArrayList<Integer> races = new ArrayList<Integer>();

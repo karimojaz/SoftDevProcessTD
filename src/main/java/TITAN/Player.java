@@ -2,6 +2,11 @@ package TITAN;
 
 import java.util.Random;
 
+/**
+ * Define each player
+ *  the player, is
+ */
+
 public class Player
 {
     private Hand cards;
