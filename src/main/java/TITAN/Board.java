@@ -10,11 +10,13 @@ public class Board
     private Player inactivePlayer;
 
     public Board() {
+
         this.cards = new Deck(42);
         this.activePlayer = new Player(this);
         this.inactivePlayer = new Player(this);
         this.activePlayer.draw(1);
     }
+
 
     public Deck getDeck() {
         return cards;
