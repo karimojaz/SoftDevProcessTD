@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import sun.security.util.PendingException;
 
 import static org.hamcrest.core.Is.is;
 
@@ -14,6 +15,15 @@ public class ElfSteps {
     private Board playground;
 
     @Before public void setup() {playground = new Board();}
+
+
+    @Given("^There is zero card in the opponent kingdom$")
+    public void There_is_zero_card_in_the_opponent_kingdom() throws Throwable {
+        playground.getInactivePlayer().getKingdom().clearKingdom();
+        playground.getDeck().getCards().add(new Elf());
+        throw  new PendingException();
+    }
+
 
     @When("^Alice plays an elf$")
         public void alice_plays_an_elf() throws  Throwable {
@@ -29,11 +39,18 @@ public class ElfSteps {
         }
 
 
+    @Then("^the card is not activated$")
+        public void Card_is_not_activated() throws Throwable{
+            Assert.assertThat(playground.getInactivePlayer().getKingdom().getSize(), is(0));
+    }
+
 
     @Then("^the card goes automatically to the kingdom$")
     public void Card_goes_to_the_kingdom() throws  Throwable {
         Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(1));
 
     }
+
+
 
 }

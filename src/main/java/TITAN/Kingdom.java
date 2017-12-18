@@ -51,6 +51,8 @@ public class Kingdom
         return cardsInKingdom.size();
     }
 
+    public void clearKingdom(){ cardsInKingdom.clear();}
+
     public void add(Card c){
         cardsInKingdom.add(c);
     }
