@@ -45,5 +45,17 @@ public class KorriganSteps {
         Assert.assertThat(playground.getInactivePlayer().getHand().getSize(), is(0));
     }
 
+    @Given("the opponent hand is empty$")
+    public void the_opponent_hand_is_empty() throws Throwable
+    {
+        Assert.assertThat(playground.getInactivePlayer().getHand().getSize(), is(0));
+    }
+
+    @Then("Alice still have the same amount of cards in her hand$")
+    public void Alice_still_have_the_same_amount_of_cards_in_her_hand() throws Throwable
+    {
+        Assert.assertThat(playground.getActivePlayer().getHand().getSize(),is(5));
+    }
+
 
 }
