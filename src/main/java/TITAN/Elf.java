@@ -13,8 +13,8 @@ public class Elf extends Card {
      * Activate the Elf functions ( he can copy the power of the chosen card )
      */
 
-    public void activate(Board board){
-        if ( board.getActivePlayer().getKingdom().getSize() > 1) {
+    public boolean activate(Board board){
+        if ( board.getActivePlayer().getKingdom().getSize() > 0) {
             System.out.print("Pick a card from your kingdom: ");
             Scanner sc = new Scanner(System.in);
             int index = sc.nextInt();
@@ -23,6 +23,7 @@ public class Elf extends Card {
                 effect.activate(board);
             }
         }
+        return true;
     }
 
     public void setEffect(Card effect) {

@@ -6,8 +6,9 @@ package TITAN;
  */
 public class Gnome extends Card {
 
-    public void activate(Board playground) {
+    public boolean activate(Board playground) {
         playground.getActivePlayer().draw(2);
+        return true;
     }
 
     public String toString(){

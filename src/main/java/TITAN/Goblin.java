@@ -5,8 +5,10 @@ package TITAN;
  */
 public class Goblin extends Card {
 
-    public void activate(Board board){
+    public boolean activate(Board board)
+    {
         board.getActivePlayer().swapHand(board.getInactivePlayer());
+        return true;
     }
 
     public String toString(){

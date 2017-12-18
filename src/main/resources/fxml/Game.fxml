@@ -23,7 +23,7 @@
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c6" fitHeight="150.0" fitWidth="200.0" layoutX="484.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="14.0">
+      <ImageView fx:id="p1hand_c6" fitHeight="150.0" fitWidth="200.0" layoutX="484.0" layoutY="14.0" onMouseClicked="#handleP1C6" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="14.0">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
@@ -33,7 +33,7 @@
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <Label layoutX="1423.0" layoutY="556.0" prefHeight="29.0" prefWidth="94.0" text="Deck : 0" textFill="WHITE">
+      <Label fx:id="deckCounter" layoutX="1423.0" layoutY="556.0" prefHeight="29.0" prefWidth="94.0" text="Deck : 0" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font>
@@ -58,27 +58,27 @@
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c5" fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c5" fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="14.0" onMouseClicked="#handleP1C5" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c4" fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c4" fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="14.0" onMouseClicked="#handleP1C4" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c3" fitHeight="150.0" fitWidth="200.0" layoutX="202.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c3" fitHeight="150.0" fitWidth="200.0" layoutX="202.0" layoutY="14.0" onMouseClicked="#handleP1C3" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c2" fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c2" fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="14.0" onMouseClicked="#handleP1C2" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleP1C1" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
@@ -103,22 +103,22 @@
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c7" fitHeight="150.0" fitWidth="200.0" layoutX="578.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c7" fitHeight="150.0" fitWidth="200.0" layoutX="578.0" layoutY="14.0" onMouseClicked="#handleP1C7" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c8" fitHeight="150.0" fitWidth="200.0" layoutX="672.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c8" fitHeight="150.0" fitWidth="200.0" layoutX="672.0" layoutY="14.0" onMouseClicked="#handleP1C8" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c9" fitHeight="150.0" fitWidth="200.0" layoutX="766.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c9" fitHeight="150.0" fitWidth="200.0" layoutX="766.0" layoutY="14.0" onMouseClicked="#handleP1C9" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c10" fitHeight="150.0" fitWidth="200.0" layoutX="860.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c10" fitHeight="150.0" fitWidth="200.0" layoutX="860.0" layoutY="14.0" onMouseClicked="#handleP1C10" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
@@ -145,5 +145,20 @@
       <ImageView fx:id="k2_c5" fitHeight="150.0" fitWidth="94.0" layoutX="437.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="k2_c6" fitHeight="150.0" fitWidth="94.0" layoutX="531.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="k2_c7" fitHeight="150.0" fitWidth="94.0" layoutX="625.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="1431.0" layoutY="14.0" prefHeight="29.0" prefWidth="94.0" text="Player 1" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="1431.0" layoutY="879.0" prefHeight="29.0" prefWidth="94.0" text="Player 2" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentPlayerLabel" layoutX="1388.0" layoutY="331.0" prefHeight="29.0" prefWidth="133.0" text="Player 1 to play" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
