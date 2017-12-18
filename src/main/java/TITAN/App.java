@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import javax.swing.text.html.ImageView;
 
 public class
 App extends Application {
@@ -16,14 +15,18 @@ App extends Application {
     public void start(Stage primaryStage) throws Exception
     {
         primaryStage.setTitle("TITAN GAME");
-        Parent root = FXMLLoader.load(App.class.getResource("/fxml/WelcomPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("/fxml/WelcomPage.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.sizeToScene();
         primaryStage.show();
 
-        //Game g = new Game();
+        WelcomeController wctrl = loader.getController();
+        wctrl.setWelcomeStage(primaryStage);
+
+       //Game g = new Game();
        // g.play();
     }
 }

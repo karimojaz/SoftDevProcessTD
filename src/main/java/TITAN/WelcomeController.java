@@ -6,23 +6,22 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javax.swing.text.html.ImageView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class WelcomeController implements Initializable {
-
-    @FXML private ImageView start;
-
+public class WelcomeController implements Initializable
+{
+    Stage welcomeStage;
 
     public WelcomeController()
     {
     }
 
-    @FXML
-    public void Change()
+    @FXML public void Change()
     {
+        welcomeStage.close();
+
         Stage primaryStage = new Stage();
         primaryStage.setTitle("TITAN GAME");
         Parent root = null;
@@ -36,6 +35,11 @@ public class WelcomeController implements Initializable {
         primaryStage.setResizable(false);
         primaryStage.sizeToScene();
         primaryStage.show();
+    }
+
+    public void setWelcomeStage(Stage s)
+    {
+        welcomeStage = s;
     }
 
     @Override
