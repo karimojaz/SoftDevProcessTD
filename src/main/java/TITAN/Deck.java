@@ -3,10 +3,17 @@ package TITAN;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/***
+ * Class, which define the deck in the game
+ */
+
 public class Deck
 {
     private ArrayList<Card> cards;
 
+    /*
+     * Set the deck with 6 card of each races
+     */
     public Deck(int size)
     {
         cards = new ArrayList<Card>();
@@ -28,6 +35,9 @@ public class Deck
         return cards;
     }
 
+    /*
+     * Remove the first card of the deck, and return this same card
+     */
     public Card pop()
     {
         Card c = cards.get(0);

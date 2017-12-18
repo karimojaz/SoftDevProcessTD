@@ -11,7 +11,7 @@ Feature: gnome management effect
     Then Alice should draw only one card
     And the deck should be empty
 
-  Scenario: a gnome is played but there no card left in the deck
+  Scenario: a gnome is played but there is no card left in the deck
     Given The deck is empty
     When Alice plays a Gnome
     Then Alice shouldn't draw card

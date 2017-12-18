@@ -2,6 +2,11 @@ package TITAN;
 
 import java.util.Random;
 
+/**
+ * Define each player
+ *  the player has a set of cards, a kingdom and a board
+ */
+
 public class Player
 {
     private Hand cards;
@@ -34,6 +39,9 @@ public class Player
         this.cards = cards;
     }
 
+    /*
+     * the player choose a card in his hand and play it, the hand is reduced
+     */
     public void playCard(int index){
         Card played = cards.popAt(index);
         cardsPlayed.add(played);
@@ -41,6 +49,9 @@ public class Player
 
     }
 
+    /*
+     * the player pick a card in the deck
+     */
     public void draw(int number){
         for (int i = 0; i < number; i++) {
             if (playGround.getDeck().getSize()>0) {
@@ -49,6 +60,9 @@ public class Player
         }
     }
 
+    /*
+     * the current player steals randomly a card in his  opponent hand
+     */
     public void steal(Player opponent){
         Random rand = new Random();
         if (opponent.getHand().getSize()>0) {
@@ -61,12 +75,19 @@ public class Player
         }
     }
 
+    /*
+     * the current player  steals a chosen card in his opponent hand
+     */
+
     public void steal(Player opponent, int index){
         if (index != -1) {
             cardsPlayed.add(opponent.getKingdom().popAt(index));
         }
     }
 
+    /*
+     * the current player and the opponnent  kingdoms are swapped
+     */
     public void swapKingdom(Player opponent){
         Kingdom k = this.cardsPlayed;
         this.setKingdom(opponent.getKingdom());
@@ -74,6 +95,10 @@ public class Player
         this.cardsPlayed.setOwner(this);
         opponent.getKingdom().setOwner(opponent);
     }
+
+    /*
+     * the current player and the opponnent hand  are swapped
+     */
 
     public void swapHand(Player opponent){
         Hand h = this.cards;

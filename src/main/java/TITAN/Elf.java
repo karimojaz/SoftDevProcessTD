@@ -2,9 +2,16 @@ package TITAN;
 
 import java.util.Scanner;
 
+/***
+ *  the card ELf  copy and use the power of one of the card in front of the current player
+ */
 public class Elf extends Card {
 
     private Card effect;
+
+    /*
+     * Activate the Elf functions ( he can copy the power of the chosen card )
+     */
 
     public void activate(Board board){
         if ( board.getActivePlayer().getKingdom().getSize() > 1) {
