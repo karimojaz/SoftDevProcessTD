@@ -35,7 +35,8 @@ public class ElfSteps {
         notempty();
         alice_plays_an_elf();
         playground.getActivePlayer().getHand().add(playground.getActivePlayer().getHand().getCardsInHand().get(0));
-        playground.getActivePlayer().getHand().popAt(0);
+        int pl = playground.getActivePlayer().getHand().getSize();
+        System.out.println(pl);
     }
 
 }
