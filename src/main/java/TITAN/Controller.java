@@ -19,7 +19,7 @@ public class Controller implements Initializable
     private ArrayList<ImageView> P1HAND, P2HAND, P1K, P2K;
     private Image dry, elf, gno, gob, korr, troll, bottom;
     @FXML private ImageView p1hand_c1, p1hand_c2, p1hand_c3, p1hand_c4, p1hand_c5, p1hand_c6, p1hand_c7, p1hand_c8, p1hand_c9, p1hand_c10, p2hand_c1, p2hand_c2, p2hand_c3, p2hand_c4, p2hand_c5, p2hand_c6, p2hand_c7, p2hand_c8, p2hand_c9, p2hand_c10, k1_c1, k1_c2, k1_c3, k1_c4, k1_c5, k1_c6, k1_c7, k2_c1, k2_c2, k2_c3, k2_c4, k2_c5, k2_c6, k2_c7;
-    @FXML private Label deckCounter;
+    @FXML private Label deckCounter, currentPlayerLabel;
     private Card selectedCard;
 
     public Controller()
@@ -50,6 +50,7 @@ public class Controller implements Initializable
         populateHands();
         populateKingdoms();
         deckCounter.setText("Deck : " + String.valueOf(board.getDeck().getSize()));
+        currentPlayerLabel.setText("Player " + (board.getActivePlayer() == board.getP1() ? "1" : "2") + " to play");
     }
 
     private void populateHands()
@@ -124,8 +125,12 @@ public class Controller implements Initializable
         selectedCard = null;
     }
 
+    //HANDLERS FOR EACH CARD'S IMAGEVIEW IN HAND CLICK.
+
     @FXML private void handleP1C1()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c1.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 0);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(0))
@@ -134,6 +139,8 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C2()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c2.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 1);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(1))
@@ -142,6 +149,8 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C3()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c3.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 2);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(2))
@@ -150,6 +159,8 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C4()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c4.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 3);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(3))
@@ -158,6 +169,8 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C5()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c5.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 4);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(4))
@@ -166,6 +179,8 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C6()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c6.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 5);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(5))
@@ -174,6 +189,8 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C7()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c7.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 6);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(6))
@@ -182,6 +199,8 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C8()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c8.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 7);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(7))
@@ -190,6 +209,8 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C9()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c9.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 8);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(8))
@@ -198,9 +219,111 @@ public class Controller implements Initializable
 
     @FXML private void handleP1C10()
     {
+        if(board.getActivePlayer() != board.getP1())
+            return;
         if(p1hand_c10.getImage() != null && selectedCard == null)
             triggerCardSelection(P1HAND, 9);
         else if(selectedCard == board.getP1().getHand().getCardsInHand().get(9))
             untriggerCardSelection(P1HAND, 9);
+    }
+
+    @FXML private void handleP2C1()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c1.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 0);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(0))
+            untriggerCardSelection(P2HAND, 0);
+    }
+
+    @FXML private void handleP2C2()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 1);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(1))
+            untriggerCardSelection(P2HAND, 1);
+    }
+
+    @FXML private void handleP2C3()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 2);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(2))
+            untriggerCardSelection(P2HAND, 2);
+    }
+
+    @FXML private void handleP2C4()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 3);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(3))
+            untriggerCardSelection(P2HAND, 3);
+    }
+
+    @FXML private void handleP2C5()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 4);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(4))
+            untriggerCardSelection(P2HAND, 4);
+    }
+
+    @FXML private void handleP2C6()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 5);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(5))
+            untriggerCardSelection(P2HAND, 5);
+    }
+
+    @FXML private void handleP2C7()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 6);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(6))
+            untriggerCardSelection(P2HAND, 6);
+    }
+
+    @FXML private void handleP2C8()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 7);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(7))
+            untriggerCardSelection(P2HAND, 7);
+    }
+
+    @FXML private void handleP2C9()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 8);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(8))
+            untriggerCardSelection(P2HAND, 8);
+    }
+
+    @FXML private void handleP2C10()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+        if(p2hand_c2.getImage() != null && selectedCard == null)
+            triggerCardSelection(P2HAND, 9);
+        else if(selectedCard == board.getP2().getHand().getCardsInHand().get(9))
+            untriggerCardSelection(P2HAND, 9);
     }
 }
