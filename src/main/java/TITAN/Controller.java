@@ -31,7 +31,7 @@ public class Controller implements Initializable
         gob = new Image(new File("resources/image/Goblin.png").toURI().toString());
         korr = new Image(new File("resources/image/Korrigan.png").toURI().toString());
         troll = new Image(new File("resources/image/Troll.png").toURI().toString());
-        bottom = new Image(new File("resources/image/DosDeCarte.png").toURI().toString());
+        bottom = new Image(new File("resources/image/EmptySlot.png").toURI().toString());
         selectedCard = null;
     }
 
