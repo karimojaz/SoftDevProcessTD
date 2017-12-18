@@ -15,18 +15,19 @@ import java.util.Collections;
 public class Board
 {
     private Deck cards;
-    private Player activePlayer;
-    private Player inactivePlayer;
+    private Player activePlayer, inactivePlayer, p1, p2;
 
     /*
     * Set the deck with 42 cards
     */
 
-    public Board() {
-
+    public Board()
+    {
         this.cards = new Deck(42);
         this.activePlayer = new Player(this);
         this.inactivePlayer = new Player(this);
+        p1 = activePlayer;
+        p2 = inactivePlayer;
         this.activePlayer.draw(1);
     }
 
@@ -34,10 +35,13 @@ public class Board
     public Deck getDeck() {
         return cards;
     }
+    public Player getP1() { return p1; }
+
+    public Player getP2() { return p2; }
 
     /*
-     * The current player
-     */
+             * The current player
+             */
     public Player getActivePlayer() {
         return activePlayer;
     }

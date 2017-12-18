@@ -6,49 +6,119 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="735.0" prefWidth="1264.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TITAN.Controller">
+<AnchorPane prefHeight="924.0" prefWidth="1539.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TITAN.Controller">
    <children>
-      <ImageView fitHeight="770.0" fitWidth="1280.0" layoutX="854.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="926.0" fitWidth="1539.0" layoutX="854.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../image/Dark-Wood-Floors-Picture-test.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="p2hand_c1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p2hand_c1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="760.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p2hand_c2" fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p2hand_c2" fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p1hand_c1" fitHeight="150.0" fitWidth="200.0" layoutX="1172.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p1hand_c6" fitHeight="150.0" fitWidth="200.0" layoutX="484.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="14.0">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="175.0" fitWidth="122.0" layoutX="1156.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="175.0" fitWidth="122.0" layoutX="1415.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <Label layoutX="1172.0" layoutY="472.0" prefHeight="29.0" prefWidth="94.0" text="Deck : 0" textFill="WHITE">
+      <Label layoutX="1423.0" layoutY="556.0" prefHeight="29.0" prefWidth="94.0" text="Deck : 0" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <ImageView fx:id="p2hand_c3" fitHeight="150.0" fitWidth="200.0" layoutX="202.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p2hand_c3" fitHeight="150.0" fitWidth="200.0" layoutX="202.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p2hand_c4" fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p2hand_c4" fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="p2hand_c5" fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="p2hand_c5" fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p2hand_c6" fitHeight="150.0" fitWidth="200.0" layoutX="484.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c5" fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c4" fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c3" fitHeight="150.0" fitWidth="200.0" layoutX="202.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c2" fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p2hand_c7" fitHeight="150.0" fitWidth="200.0" layoutX="578.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p2hand_c8" fitHeight="150.0" fitWidth="200.0" layoutX="672.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p2hand_c9" fitHeight="150.0" fitWidth="200.0" layoutX="766.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p2hand_c10" fitHeight="150.0" fitWidth="200.0" layoutX="860.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c7" fitHeight="150.0" fitWidth="200.0" layoutX="578.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c8" fitHeight="150.0" fitWidth="200.0" layoutX="672.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c9" fitHeight="150.0" fitWidth="200.0" layoutX="766.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DosDeCarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="p1hand_c10" fitHeight="150.0" fitWidth="200.0" layoutX="860.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
