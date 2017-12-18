@@ -32,26 +32,26 @@ public class KorriganSteps {
         Assert.assertThat(playground.getActivePlayer().getHand().getSize(),is(6));
     }
 
-    @Given("there is only one card left in the opponent hand$")
+    @Given("^there is only one card left in the opponent hand$")
      public void there_is_only_one_card_left_in_the_opponent_hand() throws Throwable
     {
         Assert.assertThat(playground.getInactivePlayer().getHand().getSize(),is(1));
     }
 
 
-    @Then("the opponent hand should be empty$")
+    @Then("^the opponent hand should be empty$")
     public void the_opponent_hand_should_be_empty()throws Throwable
     {
         Assert.assertThat(playground.getInactivePlayer().getHand().getSize(), is(0));
     }
 
-    @Given("the opponent hand is empty$")
+    @Given("^the opponent hand is empty$")
     public void the_opponent_hand_is_empty() throws Throwable
     {
         Assert.assertThat(playground.getInactivePlayer().getHand().getSize(), is(0));
     }
 
-    @Then("Alice still have the same amount of cards in her hand$")
+    @Then("^Alice still have the same amount of cards in her hand$")
     public void Alice_still_have_the_same_amount_of_cards_in_her_hand() throws Throwable
     {
         Assert.assertThat(playground.getActivePlayer().getHand().getSize(),is(5));
