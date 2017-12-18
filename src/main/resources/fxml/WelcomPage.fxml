@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="229" prefWidth="500" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TITAN.WelcomeController">
+    <children>
+    <ImageView fitHeight="600" fitWidth="500" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <image>
+            <Image url="@../image/welcome_board.png" />
+        </image>
+    </ImageView>
+        <ImageView onMouseClicked="#Change" fx:id="iView" fitHeight="120" fitWidth="100" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100">
+            <image>
+                <Image url="@../image/start.png" />
+            </image>
+        </ImageView>
+
+
+    </children>
+</AnchorPane>
