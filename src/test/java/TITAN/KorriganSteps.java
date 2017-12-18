@@ -34,6 +34,7 @@ public class KorriganSteps {
     public void alice_draws_two_random_cards_within_the_opponent_hand() throws Throwable{
         Assert.assertThat(playground.getInactivePlayer().getHand().getSize(),is (3));
         Assert.assertThat(playground.getActivePlayer().getKingdom().getRaceNumber(new Korrigan()), is(1));
+        Assert.assertThat(playground.getActivePlayer().getHand().getSize(),is(6));
     }
 
     //@Then("Alice should draw only one card$")
