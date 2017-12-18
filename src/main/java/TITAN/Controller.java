@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
-
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
@@ -74,5 +73,55 @@ public class Controller implements Initializable
             return troll;
         else
             return null;
+    }
+
+    private void handleP1C1()
+    {
+
+    }
+
+    private void handleP1C2()
+    {
+
+    }
+
+    private void handleP1C3()
+    {
+
+    }
+
+    private void handleP1C4()
+    {
+
+    }
+
+    private void handleP1C5()
+    {
+
+    }
+
+    private void handleP1C6()
+    {
+
+    }
+
+    private void handleP1C7()
+    {
+
+    }
+
+    private void handleP1C8()
+    {
+
+    }
+
+    private void handleP1C9()
+    {
+
+    }
+
+    private void handleP1C10()
+    {
+
     }
 }
