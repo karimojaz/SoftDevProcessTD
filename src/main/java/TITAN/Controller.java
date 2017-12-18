@@ -17,12 +17,6 @@ public class Controller implements Initializable
         board = new Board();
     }
 
-    @FXML
-    public void Change()
-    {
-        Image carte = new Image(getClass().getResource("/image/DosDeCarte.png").toString());
-    }
-
     public void initialize(URL location, ResourceBundle resources) {
     }
 }
