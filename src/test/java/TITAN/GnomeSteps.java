@@ -24,12 +24,12 @@ public class GnomeSteps {
     }
 
     @Then("^Alice has one more gnome in her kingdom$")
-    public void aliceHas1MoreGnome() {
+    public void Alice_has_one_more_gnome_in_her_kingdom() {
         Assert.assertThat(playground.getActivePlayer().getKingdom().getRaceNumber(new Gnome()), is(1));
     }
 
     @And("^Alice draws two cards from the deck$")
-    public void AliceDrawsTwoCardsFromTheDeck() {
+    public void Alice_draws_two_cards_from_the_deck() {
         Assert.assertThat(playground.getDeck().getSize(), is(30));
         Assert.assertThat(playground.getActivePlayer().getHand().getSize(), is(2));
     }
