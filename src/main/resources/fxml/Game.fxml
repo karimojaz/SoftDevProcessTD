@@ -75,47 +75,47 @@
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="984.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="890.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="702.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="796.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="608.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="514.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="420.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="326.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="175.0" fitWidth="122.0" layoutX="1156.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../media/victor/HDD/CODE/SoftDevProcessTD/src/main/resources/image/DosDeCarte.png" />
+            <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
       <Label layoutX="1172.0" layoutY="472.0" prefHeight="29.0" prefWidth="94.0" text="Deck : 0" textFill="WHITE">
