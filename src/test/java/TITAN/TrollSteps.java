@@ -17,7 +17,7 @@ public class TrollSteps {
     }
 
     @When("^Alice plays a troll$")
-    public void alice_play_a_troll() throws Throwable {
+    public void alice_plays_a_troll() throws Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Troll());
         playground.getActivePlayer().playCard(0);
