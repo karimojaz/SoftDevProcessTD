@@ -29,6 +29,7 @@ public class DryadSteps {
 
     @And("^Alice stoles a card in front of your opponent and add it in front of you$")
     public void alice_stoles_a_card_in_front_of_your_opponent_and_add_it_in_front_of_you() {
+        Assert.assertThat(playground.getInactivePlayer().getKingdom().getSize(),is(0));
         Assert.assertThat(playground.getActivePlayer().getKingdom().getSize(),is(2));
     }
 
