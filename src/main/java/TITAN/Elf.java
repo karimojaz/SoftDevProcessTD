@@ -1,7 +1,5 @@
 package TITAN;
 
-import java.util.Scanner;
-
 /***
  *  the card ELf  copy and use the power of one of the card in front of the current player
  */
@@ -13,16 +11,16 @@ public class Elf extends Card {
      * Activate the Elf functions ( he can copy the power of the chosen card )
      */
 
-    public boolean activate(Board board, Controller ptrToCtrl){
-        if ( board.getActivePlayer().getKingdom().getSize() > 0) {
-            System.out.print("Pick a card from your kingdom: ");
-            Scanner sc = new Scanner(System.in);
-            int index = sc.nextInt();
-            this.setEffect(board.getActivePlayer().getKingdom().getCardsInKingdom().get(index));
-            if (effect != null) {
+    public boolean activate(Board board, Controller ptrToCtrl)
+    {
+        if ( board.getActivePlayer().getKingdom().getSize() > 0)
+        {
+            this.setEffect(board.getActivePlayer().getKingdom().getCardsInKingdom().get(ptrToCtrl.chooseCardFromOwnKingdom()));
+
+            if (effect != null)
                 effect.activate(board, ptrToCtrl);
-            }
         }
+
         return true;
     }
 

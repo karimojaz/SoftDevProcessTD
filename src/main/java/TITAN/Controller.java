@@ -1,8 +1,10 @@
 package TITAN;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.CacheHint;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Label;
 import javafx.scene.effect.ColorAdjust;
@@ -25,7 +27,7 @@ public class Controller implements Initializable
 
     //All the ImageViews
     @FXML private ImageView p1hand_c1, p1hand_c2, p1hand_c3, p1hand_c4, p1hand_c5, p1hand_c6, p1hand_c7, p1hand_c8, p1hand_c9, p1hand_c10, p1hand_c11, p1hand_c12, p1hand_c13, p1hand_c14, p1hand_c15, p2hand_c1, p2hand_c2, p2hand_c3, p2hand_c4, p2hand_c5, p2hand_c6, p2hand_c7, p2hand_c8, p2hand_c9, p2hand_c10, p2hand_c11, p2hand_c12, p2hand_c13, p2hand_c14, p2hand_c15, k1_c1, k1_c2, k1_c3, k1_c4, k1_c5, k1_c6, k1_c7, k1_c8, k1_c9, k1_c10, k1_c11, k1_c12, k1_c13, k1_c14, k1_c15, k1_c16, k1_c17, k1_c18, k1_c19, k2_c1, k2_c2, k2_c3, k2_c4, k2_c5, k2_c6, k2_c7, k2_c8, k2_c9, k2_c10, k2_c11, k2_c12, k2_c13, k2_c14, k2_c15, k2_c16, k2_c17, k2_c18, k2_c19;
-    @FXML private Label deckCounter, currentPlayerLabel;
+    @FXML private Label deckCounter, currentPlayerLabel, p1Score, p2Score;
 
     public Controller()
     {
@@ -59,6 +61,25 @@ public class Controller implements Initializable
         populateKingdoms();
         deckCounter.setText("Deck : " + String.valueOf(board.getDeck().getSize()));
         currentPlayerLabel.setText("Player " + (board.getActivePlayer() == board.getP1() ? "1" : "2") + "'s turn");
+        board.getP1().calculateScore();
+        board.getP2().calculateScore();
+        p1Score.setText("Score : " + String.valueOf(board.getP1().getScore()));
+        p2Score.setText("Score : " + String.valueOf(board.getP2().getScore()));
+
+        if(board.getActivePlayer().getHand().getSize() == 0)
+        {
+            int s1 = board.getP1().getScore();
+            int s2 = board.getP2().getScore();
+
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setTitle("TITAN GAME");
+            a.setHeaderText("Game Over !");
+            a.setContentText("Player " + (s1 > s2 ? "1" : "2") + " wins the game !");
+            a.showAndWait();
+
+            Platform.exit();
+            System.exit(0);
+        }
     }
 
     private void populateHands()
@@ -145,7 +166,30 @@ public class Controller implements Initializable
 
         ChoiceDialog<String> dialog = new ChoiceDialog<>("1 : " + board.getInactivePlayer().getKingdom().getCardsInKingdom().get(0).toString(), choices);
         dialog.setTitle("TITAN GAME");
-        dialog.setHeaderText("Choose a card from your opponent's kingdom !");
+        dialog.setHeaderText("Choose a card from your opponent's kingdom to steal it !");
+        dialog.setContentText("Card :");
+
+        Optional<String> res;
+
+        do
+        {
+            res = dialog.showAndWait();
+        }while(!res.isPresent());
+
+        return Integer.parseInt(res.get().substring(0,1)) - 1;
+    }
+
+    public int chooseCardFromOwnKingdom()
+    {
+        ArrayList<String> choices = new ArrayList<>();
+        for(int i = 0; i<board.getActivePlayer().getKingdom().getSize();i++)
+        {
+            choices.add(String.valueOf(i+1) + " : " + board.getActivePlayer().getKingdom().getCardsInKingdom().get(i).toString());
+        }
+
+        ChoiceDialog<String> dialog = new ChoiceDialog<>("1 : " + board.getActivePlayer().getKingdom().getCardsInKingdom().get(0).toString(), choices);
+        dialog.setTitle("TITAN GAME");
+        dialog.setHeaderText("Choose a card from your kingdom to copy its effect !");
         dialog.setContentText("Card :");
 
         Optional<String> res;

@@ -12,11 +12,13 @@ public class Player
     private Hand cards;
     private Board playGround;
     private Kingdom cardsPlayed;
+    private int score;
 
     public Player(Board playGround) {
         this.playGround = playGround;
         this.cardsPlayed = new Kingdom(this);
         this.cards = new Hand(this);
+        score = 0;
     }
 
     public Hand getHand() {
@@ -105,5 +107,41 @@ public class Player
         opponent.setHand(h);
         this.cards.setOwner(this);
         opponent.getHand().setOwner(opponent);
+    }
+
+    public int getScore() {return score;}
+
+    public void calculateScore()
+    {
+        score = getKingdom().getSize();
+        Card c;
+        int dry = 0;
+        int elf = 0;
+        int gno = 0;
+        int gob = 0;
+        int korr  = 0;
+        int troll = 0;
+
+        for(int i = 0; i<getKingdom().getSize(); i++)
+        {
+            c = getKingdom().getCardsInKingdom().get(i);
+
+            if(c instanceof Dryad)
+                dry++;
+            else if(c instanceof Elf)
+                elf++;
+            else if(c instanceof Gnome)
+                gno++;
+            else if(c instanceof Goblin)
+                gob++;
+            else if(c instanceof Korrigan)
+                korr++;
+            else if(c instanceof Troll)
+                troll++;
+        }
+
+        int races[] = {dry, elf, gno, gob, korr, troll};
+        for(int i = 0; i<5; i++)
+            if(races[i] >= 3) score +=3;
     }
 }

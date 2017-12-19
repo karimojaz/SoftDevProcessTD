@@ -236,5 +236,15 @@
       <ImageView fx:id="k2_c17" fitHeight="150.0" fitWidth="94.0" layoutX="343.0" layoutY="441.0" onMouseClicked="#handleK2" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="k2_c18" fitHeight="150.0" fitWidth="94.0" layoutX="437.0" layoutY="441.0" onMouseClicked="#handleK2" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="k2_c19" fitHeight="150.0" fitWidth="94.0" layoutX="531.0" layoutY="441.0" onMouseClicked="#handleK2" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="p1Score" layoutX="1385.0" layoutY="227.0" prefHeight="29.0" prefWidth="109.0" text="Score : 0" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="p2Score" layoutX="1385.0" layoutY="666.0" prefHeight="29.0" prefWidth="109.0" text="Score : 0" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
