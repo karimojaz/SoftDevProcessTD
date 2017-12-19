@@ -3,6 +3,7 @@ package TITAN;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.CacheHint;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Label;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.ImageView;
@@ -11,6 +12,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable
@@ -20,9 +22,9 @@ public class Controller implements Initializable
     private Image dry, elf, gno, gob, korr, troll, bottom, karimlafolle;
     private Card selectedCard;
     private int selectedCardIndex;
-    private boolean selectingFromOpponentKingdom;
 
-    @FXML private ImageView p1hand_c1, p1hand_c2, p1hand_c3, p1hand_c4, p1hand_c5, p1hand_c6, p1hand_c7, p1hand_c8, p1hand_c9, p1hand_c10, p1hand_c11, p1hand_c12, p1hand_c13, p1hand_c14, p1hand_c15, p2hand_c1, p2hand_c2, p2hand_c3, p2hand_c4, p2hand_c5, p2hand_c6, p2hand_c7, p2hand_c8, p2hand_c9, p2hand_c10, p2hand_c11, p2hand_c12, p2hand_c13, p2hand_c14, p2hand_c15, k1_c1, k1_c2, k1_c3, k1_c4, k1_c5, k1_c6, k1_c7, k1_c8, k2_c1, k2_c2, k2_c3, k2_c4, k2_c5, k2_c6, k2_c7, k2_c8;
+    //All the ImageViews
+    @FXML private ImageView p1hand_c1, p1hand_c2, p1hand_c3, p1hand_c4, p1hand_c5, p1hand_c6, p1hand_c7, p1hand_c8, p1hand_c9, p1hand_c10, p1hand_c11, p1hand_c12, p1hand_c13, p1hand_c14, p1hand_c15, p2hand_c1, p2hand_c2, p2hand_c3, p2hand_c4, p2hand_c5, p2hand_c6, p2hand_c7, p2hand_c8, p2hand_c9, p2hand_c10, p2hand_c11, p2hand_c12, p2hand_c13, p2hand_c14, p2hand_c15, k1_c1, k1_c2, k1_c3, k1_c4, k1_c5, k1_c6, k1_c7, k1_c8, k1_c9, k1_c10, k1_c11, k1_c12, k1_c13, k1_c14, k1_c15, k1_c16, k1_c17, k1_c18, k1_c19, k2_c1, k2_c2, k2_c3, k2_c4, k2_c5, k2_c6, k2_c7, k2_c8, k2_c9, k2_c10, k2_c11, k2_c12, k2_c13, k2_c14, k2_c15, k2_c16, k2_c17, k2_c18, k2_c19;
     @FXML private Label deckCounter, currentPlayerLabel;
 
     public Controller()
@@ -39,15 +41,14 @@ public class Controller implements Initializable
 
         selectedCard = null;
         selectedCardIndex = -1;
-        selectingFromOpponentKingdom = false;
     }
 
     @FXML public void initialize(URL location, ResourceBundle resources)
     {
         P1HAND = new ArrayList<>(Arrays.asList(p1hand_c1, p1hand_c2, p1hand_c3, p1hand_c4, p1hand_c5, p1hand_c6, p1hand_c7, p1hand_c8, p1hand_c9, p1hand_c10, p1hand_c11, p1hand_c12, p1hand_c13, p1hand_c14, p1hand_c15));
         P2HAND = new ArrayList<>(Arrays.asList(p2hand_c1, p2hand_c2, p2hand_c3, p2hand_c4, p2hand_c5, p2hand_c6, p2hand_c7, p2hand_c8, p2hand_c9, p2hand_c10, p2hand_c11, p2hand_c12, p2hand_c13, p2hand_c14, p2hand_c15));
-        P1K = new ArrayList<>(Arrays.asList(k1_c1, k1_c2, k1_c3, k1_c4, k1_c5, k1_c6, k1_c7, k1_c8));
-        P2K = new ArrayList<>(Arrays.asList(k2_c1, k2_c2, k2_c3, k2_c4, k2_c5, k2_c6, k2_c7, k2_c8));
+        P1K = new ArrayList<>(Arrays.asList(k1_c1, k1_c2, k1_c3, k1_c4, k1_c5, k1_c6, k1_c7, k1_c8, k1_c9, k1_c10, k1_c11, k1_c12, k1_c13, k1_c14, k1_c15, k1_c16, k1_c17, k1_c18, k1_c19));
+        P2K = new ArrayList<>(Arrays.asList(k2_c1, k2_c2, k2_c3, k2_c4, k2_c5, k2_c6, k2_c7, k2_c8, k2_c9, k2_c10, k2_c11, k2_c12, k2_c13, k2_c14, k2_c15, k2_c16, k2_c17, k2_c18, k2_c19));
 
         flushBoard();
     }
@@ -134,32 +135,27 @@ public class Controller implements Initializable
         selectedCardIndex = -1;
     }
 
-    public Card selectCardFromInactiveKingdom()
+    public int chooseCardFromOpponentKingdom()
     {
-        ArrayList<ImageView> inactivePlayerKingdomImgs = board.getActivePlayer() == board.getP1() ? P2K : P1K;
-
-        ColorAdjust glow = new ColorAdjust();
-        glow.setBrightness(0.5);
-
-        for (int i = 0; i < inactivePlayerKingdomImgs.size(); i++)
+        ArrayList<String> choices = new ArrayList<>();
+        for(int i = 0; i<board.getInactivePlayer().getKingdom().getSize();i++)
         {
-            inactivePlayerKingdomImgs.get(i).setEffect(glow);
-            inactivePlayerKingdomImgs.get(i).setCache(true);
-            inactivePlayerKingdomImgs.get(i).setCacheHint(CacheHint.SPEED);
+            choices.add(String.valueOf(i+1) + " : " + board.getInactivePlayer().getKingdom().getCardsInKingdom().get(i).toString());
         }
 
-        selectingFromOpponentKingdom = true;
+        ChoiceDialog<String> dialog = new ChoiceDialog<>("1 : " + board.getInactivePlayer().getKingdom().getCardsInKingdom().get(0).toString(), choices);
+        dialog.setTitle("TITAN GAME");
+        dialog.setHeaderText("Choose a card from your opponent's kingdom !");
+        dialog.setContentText("Card :");
 
-        while(selectingFromOpponentKingdom)
+        Optional<String> res;
+
+        do
         {
-            if(selectedCard != null)
-                selectingFromOpponentKingdom = false;
-        }
+            res = dialog.showAndWait();
+        }while(!res.isPresent());
 
-        for (int i = 0; i < inactivePlayerKingdomImgs.size(); i++)
-            inactivePlayerKingdomImgs.get(i).setEffect(null);
-
-        return null;
+        return Integer.parseInt(res.get().substring(0,1)) - 1;
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
