@@ -20,7 +20,7 @@ public class GoblinSteps {
     public void alice_plays_a_goblin() throws Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Goblin());
-        playground.getActivePlayer().playCard(0);
+        playground.getActivePlayer().playCard(0, null);
     }
     @Then("^Alice has one more goblin in her kingdom$")
     public void alice_has_one_more_goblin() {

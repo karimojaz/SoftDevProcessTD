@@ -339,8 +339,9 @@ public class Controller implements Initializable
 
         if(selectedCard != null)
         {
-            board.getActivePlayer().playCard(selectedCardIndex);
+            board.getActivePlayer().playCard(selectedCardIndex, this);
             untriggerCardSelection(P1HAND, selectedCardIndex);
+            board.newTurn();
         }
 
         flushBoard();
@@ -353,8 +354,9 @@ public class Controller implements Initializable
 
         if(selectedCard != null)
         {
-            board.getActivePlayer().playCard(selectedCardIndex);
+            board.getActivePlayer().playCard(selectedCardIndex, this);
             untriggerCardSelection(P2HAND, selectedCardIndex);
+            board.newTurn();
         }
 
         flushBoard();

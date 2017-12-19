@@ -22,7 +22,7 @@ public class KorriganSteps {
     public void alice_plays_a_korrigan() throws Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Korrigan());
-        playground.getActivePlayer().playCard(0);
+        playground.getActivePlayer().playCard(0, null);
     }
 
     @Then("^Alice draws two random cards within the opponent hand$")

@@ -20,7 +20,7 @@ public class DryadSteps {
     public void alice_plays_a_dryad() throws Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Dryad());
-        playground.getActivePlayer().playCard(0);
+        playground.getActivePlayer().playCard(0, null);
     }
     @Then("^Alice has one more dryad in her kingdom$")
     public void alice_has_one_more_dryad() {

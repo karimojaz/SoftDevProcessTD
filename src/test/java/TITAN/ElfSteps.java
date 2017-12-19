@@ -21,7 +21,7 @@ public class ElfSteps {
     public void alice_plays_an_elf() throws  Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Elf());
-        playground.getActivePlayer().playCard(0);
+        playground.getActivePlayer().playCard(0, null);
     }
 
     @And("^the opponent hand is not empty$")

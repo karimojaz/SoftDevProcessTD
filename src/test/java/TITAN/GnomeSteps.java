@@ -20,7 +20,7 @@ public class GnomeSteps {
     public void alice_plays_a_gnome() throws Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Gnome());
-        playground.getActivePlayer().playCard(0);
+        playground.getActivePlayer().playCard(0, null);
     }
 
     @Then("^Alice has one more gnome in her kingdom$")

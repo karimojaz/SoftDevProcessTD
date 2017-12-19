@@ -1,6 +1,5 @@
 package TITAN;
 
-
 /***
  * the gnome can draw 2 cards
  */
@@ -14,5 +13,4 @@ public class Gnome extends Card {
     public String toString(){
         return "Gnome";
     }
-
 }

@@ -42,10 +42,10 @@ public class Player
     /*
      * the player choose a card in his hand and play it, the hand is reduced
      */
-    public void playCard(int index){
+    public void playCard(int index, Controller ptrToController){
         Card played = cards.popAt(index);
         cardsPlayed.add(played);
-        //played.activate(playGround);
+        played.activate(playGround, ptrToController);
     }
 
     /*

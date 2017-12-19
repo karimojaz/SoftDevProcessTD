@@ -21,7 +21,7 @@ public class Game {
             Scanner sc = new Scanner(System.in);
             int index = sc.nextInt();
 
-            board.getActivePlayer().playCard(index);
+            board.getActivePlayer().playCard(index, null);
             board.newTurn();
         }
         while (!board.getActivePlayer().getHand().isEmpty() ){
@@ -33,7 +33,7 @@ public class Game {
             Scanner sc = new Scanner(System.in);
             int index = sc.nextInt();
 
-            board.getActivePlayer().playCard(index);
+            board.getActivePlayer().playCard(index, null);
 
             if ( board.getInactivePlayer().getHand().isEmpty())
             {

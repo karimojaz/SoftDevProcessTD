@@ -20,7 +20,7 @@ public class TrollSteps {
     public void alice_plays_a_troll() throws Throwable {
         playground.getActivePlayer().getHand().getCardsInHand().clear();
         playground.getActivePlayer().getHand().add(new Troll());
-        playground.getActivePlayer().playCard(0);
+        playground.getActivePlayer().playCard(0, null);
     }
     @Then("^Alice swaps the cards in front of her with the opponent$")
     public void alice_swaps_the_cards_in_front_of_her_with_the_opponent() {
