@@ -123,28 +123,28 @@
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="k1_c1" fitHeight="150.0" fitWidth="200.0" layoutX="61.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="k1_c1" onMouseClicked="#handleK1" fitHeight="150.0" fitWidth="200.0" layoutX="61.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="k1_c2" fitHeight="150.0" fitWidth="94.0" layoutX="155.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k1_c3" fitHeight="150.0" fitWidth="94.0" layoutX="249.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k1_c4" fitHeight="150.0" fitWidth="94.0" layoutX="343.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k1_c5" fitHeight="150.0" fitWidth="94.0" layoutX="437.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k1_c6" fitHeight="150.0" fitWidth="94.0" layoutX="531.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k1_c7" fitHeight="150.0" fitWidth="94.0" layoutX="625.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k2_c1" fitHeight="150.0" fitWidth="200.0" layoutX="61.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="k1_c2" onMouseClicked="#handleK1" fitHeight="150.0" fitWidth="94.0" layoutX="155.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k1_c3" onMouseClicked="#handleK1" fitHeight="150.0" fitWidth="94.0" layoutX="249.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k1_c4" onMouseClicked="#handleK1" fitHeight="150.0" fitWidth="94.0" layoutX="343.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k1_c5" onMouseClicked="#handleK1" fitHeight="150.0" fitWidth="94.0" layoutX="437.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k1_c6" onMouseClicked="#handleK1" fitHeight="150.0" fitWidth="94.0" layoutX="531.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k1_c7" onMouseClicked="#handleK1" fitHeight="150.0" fitWidth="94.0" layoutX="625.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k2_c1" onMouseClicked="#handleK2" fitHeight="150.0" fitWidth="200.0" layoutX="61.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/DosDeCarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="k2_c2" fitHeight="150.0" fitWidth="94.0" layoutX="155.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k2_c3" fitHeight="150.0" fitWidth="94.0" layoutX="249.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k2_c4" fitHeight="150.0" fitWidth="94.0" layoutX="343.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k2_c5" fitHeight="150.0" fitWidth="94.0" layoutX="437.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k2_c6" fitHeight="150.0" fitWidth="94.0" layoutX="531.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="k2_c7" fitHeight="150.0" fitWidth="94.0" layoutX="625.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k2_c2" onMouseClicked="#handleK2" fitHeight="150.0" fitWidth="94.0" layoutX="155.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k2_c3" onMouseClicked="#handleK2" fitHeight="150.0" fitWidth="94.0" layoutX="249.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k2_c4" onMouseClicked="#handleK2" fitHeight="150.0" fitWidth="94.0" layoutX="343.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k2_c5" onMouseClicked="#handleK2" fitHeight="150.0" fitWidth="94.0" layoutX="437.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k2_c6" onMouseClicked="#handleK2" fitHeight="150.0" fitWidth="94.0" layoutX="531.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="k2_c7" onMouseClicked="#handleK2" fitHeight="150.0" fitWidth="94.0" layoutX="625.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="1431.0" layoutY="14.0" prefHeight="29.0" prefWidth="94.0" text="Player 1" textFill="WHITE">
          <font>
             <Font size="19.0" />

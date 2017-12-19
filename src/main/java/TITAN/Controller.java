@@ -18,9 +18,11 @@ public class Controller implements Initializable
     private Board board;
     private ArrayList<ImageView> P1HAND, P2HAND, P1K, P2K;
     private Image dry, elf, gno, gob, korr, troll, bottom;
+    private Card selectedCard;
+    private int selectedCardIndex;
+
     @FXML private ImageView p1hand_c1, p1hand_c2, p1hand_c3, p1hand_c4, p1hand_c5, p1hand_c6, p1hand_c7, p1hand_c8, p1hand_c9, p1hand_c10, p2hand_c1, p2hand_c2, p2hand_c3, p2hand_c4, p2hand_c5, p2hand_c6, p2hand_c7, p2hand_c8, p2hand_c9, p2hand_c10, k1_c1, k1_c2, k1_c3, k1_c4, k1_c5, k1_c6, k1_c7, k2_c1, k2_c2, k2_c3, k2_c4, k2_c5, k2_c6, k2_c7;
     @FXML private Label deckCounter, currentPlayerLabel;
-    private Card selectedCard;
 
     public Controller()
     {
@@ -33,6 +35,7 @@ public class Controller implements Initializable
         troll = new Image(new File("resources/image/Troll.png").toURI().toString());
         bottom = new Image(new File("resources/image/EmptySlot.png").toURI().toString());
         selectedCard = null;
+        selectedCardIndex = -1;
     }
 
     @FXML public void initialize(URL location, ResourceBundle resources)
@@ -117,12 +120,14 @@ public class Controller implements Initializable
         L.get(index).setCache(true);
         L.get(index).setCacheHint(CacheHint.SPEED);
         selectedCard = board.getP1().getHand().getCardsInHand().get(index);
+        selectedCardIndex = index;
     }
 
     private void untriggerCardSelection(ArrayList<ImageView> L, int index)
     {
         L.get(index).setEffect(null);
         selectedCard = null;
+        selectedCardIndex = -1;
     }
 
     //HANDLERS FOR EACH CARD'S IMAGEVIEW IN HAND CLICK.
@@ -325,5 +330,33 @@ public class Controller implements Initializable
             triggerCardSelection(P2HAND, 9);
         else if(selectedCard == board.getP2().getHand().getCardsInHand().get(9))
             untriggerCardSelection(P2HAND, 9);
+    }
+
+    @FXML private void handleK1()
+    {
+        if(board.getActivePlayer() != board.getP1())
+            return;
+
+        if(selectedCard != null)
+        {
+            board.getActivePlayer().playCard(selectedCardIndex);
+            untriggerCardSelection(P1HAND, selectedCardIndex);
+        }
+
+        flushBoard();
+    }
+
+    @FXML private void handleK2()
+    {
+        if(board.getActivePlayer() != board.getP2())
+            return;
+
+        if(selectedCard != null)
+        {
+            board.getActivePlayer().playCard(selectedCardIndex);
+            untriggerCardSelection(P2HAND, selectedCardIndex);
+        }
+
+        flushBoard();
     }
 }

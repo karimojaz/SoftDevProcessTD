@@ -45,8 +45,7 @@ public class Player
     public void playCard(int index){
         Card played = cards.popAt(index);
         cardsPlayed.add(played);
-        played.activate(playGround);
-
+        //played.activate(playGround);
     }
 
     /*

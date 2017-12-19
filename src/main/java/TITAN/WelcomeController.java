@@ -12,16 +12,10 @@ import java.util.ResourceBundle;
 
 public class WelcomeController implements Initializable
 {
-    Stage welcomeStage;
-
-    public WelcomeController()
-    {
-    }
+    private Stage welcomeStage;
 
     @FXML public void Change()
     {
-        welcomeStage.close();
-
         Stage primaryStage = new Stage();
         primaryStage.setTitle("TITAN GAME");
         Parent root = null;
@@ -34,6 +28,8 @@ public class WelcomeController implements Initializable
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.sizeToScene();
+
+        welcomeStage.close();
         primaryStage.show();
     }
 
