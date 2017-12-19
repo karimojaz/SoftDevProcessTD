@@ -5,7 +5,7 @@ package TITAN;
  */
 public class Goblin extends Card {
 
-    public boolean activate(Board board)
+    public boolean activate(Board board, Controller ptrToCtrl)
     {
         board.getActivePlayer().swapHand(board.getInactivePlayer());
         return true;

@@ -5,7 +5,7 @@ package TITAN;
  */
 public class Korrigan extends Card {
 
-    public boolean activate(Board board){
+    public boolean activate(Board board, Controller ptrToCtrl){
         board.getActivePlayer().steal(board.getInactivePlayer());
         return true;
     }
