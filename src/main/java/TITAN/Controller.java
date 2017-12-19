@@ -67,7 +67,7 @@ public class Controller implements Initializable
         p1Score.setText("Score : " + String.valueOf(board.getP1().getScore()));
         p2Score.setText("Score : " + String.valueOf(board.getP2().getScore()));
 
-        if(lastTurn)
+        if(lastTurn || board.getActivePlayer().getHand().getSize() == 0)
         {
             int s1 = board.getP1().getScore();
             int s2 = board.getP2().getScore();
