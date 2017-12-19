@@ -23,7 +23,7 @@ public class Board
 
     public Board()
     {
-        this.cards = new Deck(42);
+        this.cards = new Deck(30);
         this.activePlayer = new Player(this);
         this.inactivePlayer = new Player(this);
         p1 = activePlayer;
